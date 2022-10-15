@@ -125,7 +125,7 @@ function renderStore(){
             const id = parseInt(button.getAttribute('data-id'));
             const item = db.methods.find(id);
 
-            if(item && item.qty -1 > 0){
+            if(item && item.qty -1 >= 0){
                 // Add to cart
                 shoppingCart.methods.add(id, 1);
                 renderShoppingCart();
